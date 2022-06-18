@@ -1,24 +1,22 @@
 class Solution:
     def getNewNumber(self, n: int):
-        newNumber = 0
-        for x in list(str(n)):
-            newNumber += int(x)**2
-        return newNumber
+        digits = [int(a) for a in str(n)] 
+        newNum = 0
+        for x in digits:
+            newNum += x**2
+        return newNum
+
+    def findEnd(self, number: int, alrSeen: list):
+        if number == 1:
+            return True
+        if number in alrSeen:
+            return False
+        newNum = self.getNewNumber(number)
+        alrSeen.append(number)
+        return self.findEnd(newNum, alrSeen)
 
     def isHappy(self, n: int) -> bool:
-        alreadySeen = [n]
-        
-        newNum = self.getNewNumber(n)
-        if newNum == 1:
-            return True
-
-        while newNum not in alreadySeen:
-            if newNum == 1:
-                return True
-            alreadySeen.append(newNum)
-            newNum = self.getNewNumber(newNum)
-
-        return False
+        return self.findEnd(n, [])
         
         
 def test_():
