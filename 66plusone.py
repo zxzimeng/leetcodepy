@@ -2,7 +2,9 @@
 
 from typing import List
 
+
 class Solution:
+
     def plusOne(self, digits: List[int]) -> List[int]:
         numberAsStr = listToStr = ' '.join([str(elem) for elem in digits])
         numberAsStr = numberAsStr.replace(" ", "")
@@ -14,4 +16,4 @@ class Solution:
 
 def test_plusOne():
     solution = Solution()
-    assert solution.plusOne([1,2,3,4]) == [1,2,3,4]
+    assert solution.plusOne([1, 2, 3, 4]) == [1, 2, 3, 4]

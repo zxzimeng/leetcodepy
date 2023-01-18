@@ -2,7 +2,9 @@
 
 from typing import List
 
+
 class Solution:
+
     def judgeCircle(self, moves: str) -> bool:
         strList = list(moves)
         x = 0
@@ -19,7 +21,8 @@ class Solution:
         if x == 0 and y == 0:
             return True
         return False
-    
-def test_judgeCircle ():
+
+
+def test_judgeCircle():
     solution = Solution()
     assert solution.judgeCircle("UD") == True

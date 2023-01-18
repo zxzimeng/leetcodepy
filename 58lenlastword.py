@@ -3,7 +3,9 @@
 from typing import List
 import re
 
+
 class Solution:
+
     def lengthOfLastWord(self, s: str) -> int:
         if bool(s and not s.isspace()) == False:
             return 0

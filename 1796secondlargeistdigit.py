@@ -1,4 +1,5 @@
 class Solution:
+
     def secondHighest(self, s: str) -> int:
         numbers = []
         for i in s:
@@ -10,12 +11,9 @@ class Solution:
         if len(numbers_ordered) > 1:
             return numbers_ordered[-2]
         return -1
-                
+
 
 def test_():
     testfunc = Solution().secondHighest
     assert testfunc("dfa12321afd") == 2
     assert testfunc("abc1111") == -1
-
-
-

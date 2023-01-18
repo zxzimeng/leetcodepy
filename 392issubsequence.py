@@ -1,5 +1,5 @@
-
 class Solution:
+
     def filterFirst(self, s, t):
         if not s:
             return True
@@ -15,6 +15,6 @@ class Solution:
 
 def test_():
     testfunc = Solution().isSubsequence
-    assert testfunc("abc" ,"ahbgdc") == True
+    assert testfunc("abc", "ahbgdc") == True
     assert testfunc("", "ahgbdc") == True
     assert testfunc("b", "abc") == True

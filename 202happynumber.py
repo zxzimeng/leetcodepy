@@ -1,6 +1,7 @@
 class Solution:
+
     def getNewNumber(self, n: int):
-        digits = [int(a) for a in str(n)] 
+        digits = [int(a) for a in str(n)]
         newNum = 0
         for x in digits:
             newNum += x**2
@@ -17,8 +18,8 @@ class Solution:
 
     def isHappy(self, n: int) -> bool:
         return self.findEnd(n, [])
-        
-        
+
+
 def test_():
     testfunc = Solution().isHappy
     assert testfunc(2) == False

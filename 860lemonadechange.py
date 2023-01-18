@@ -1,6 +1,8 @@
 from typing import List
 
+
 class Solution:
+
     def findMinChange(self, change, avaliable):
 
         if change == 0:
@@ -51,7 +53,8 @@ class Solution:
             avaliable = remaining
         return True
 
+
 def test_():
     testfunc = Solution().lemonadeChange
-    assert testfunc([5,5,5,10,20]) == True
-    assert testfunc([5,5,10,10,20]) == False
+    assert testfunc([5, 5, 5, 10, 20]) == True
+    assert testfunc([5, 5, 10, 10, 20]) == False

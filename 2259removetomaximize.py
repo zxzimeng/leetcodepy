@@ -1,4 +1,5 @@
 class Solution:
+
     def listInt(self, intlist: list):
         numberstr = ''
         for x in intlist:
@@ -10,10 +11,12 @@ class Solution:
         numberlist = list(number)
         for i, x in enumerate(numberlist):
             if x == digit:
-                numberWithRemoved = self.listInt(numberlist[0:i]+numberlist[i+1:])
+                numberWithRemoved = self.listInt(numberlist[0:i] +
+                                                 numberlist[i + 1:])
                 if numberWithRemoved > largest:
                     largest = numberWithRemoved
         return str(largest)
+
 
 def test_():
     testfunc = Solution().removeDigit

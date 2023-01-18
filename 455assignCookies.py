@@ -1,7 +1,9 @@
 from this import d
 from typing import List
 
+
 class Solution:
+
     def findContentChildren(self, g: List[int], s: List[int]) -> int:
         content = 0
         g.sort()
@@ -11,10 +13,11 @@ class Solution:
             for i, j in enumerate(s):
                 if j >= x:
                     content += 1
-                    s = s[i+1:]
+                    s = s[i + 1:]
                     break
 
         return content
+
 
 def test_():
     testfunc = Solution().findContentChildren

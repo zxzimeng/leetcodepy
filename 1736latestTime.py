@@ -1,4 +1,5 @@
 class Solution:
+
     def maximumTime(self, time: str) -> str:
         hours = list(time[0:2])
         minutes = list(time[3:])
@@ -18,10 +19,10 @@ class Solution:
                             hours[i] = "3"
                         else:
                             hours[i] = "9"
-                        
+
         if time[3:] == "??":
             minutes = "59"
-        else: 
+        else:
             for i, x in enumerate(minutes):
                 if x == "?":
                     if i == 0:
@@ -30,6 +31,7 @@ class Solution:
                         minutes[i] = "9"
 
         return hours[0] + hours[1] + ':' + minutes[0] + minutes[1]
+
 
 def test_():
     testfunc = Solution().maximumTime

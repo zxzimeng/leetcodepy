@@ -3,6 +3,7 @@ from typing import List
 
 
 class Solution:
+
     def checkPalindrome(self, s: List):
         if list(reversed(s)) == s:
             return True
@@ -15,8 +16,8 @@ class Solution:
             return True
 
         for i, x in enumerate(palin_list):
-            print(i, x, palin_list, palin_list[-(i+1)])
-            if x == palin_list[-(i+1)]:
+            print(i, x, palin_list, palin_list[-(i + 1)])
+            if x == palin_list[-(i + 1)]:
                 continue
 
             removed_list = palin_list.copy()
@@ -25,14 +26,12 @@ class Solution:
                 return True
             else:
                 removed_list = palin_list.copy()
-                del removed_list[-(i+1)]
+                del removed_list[-(i + 1)]
                 if self.checkPalindrome(removed_list):
                     return True
                 return False
 
         return True
-
-
 
 
 def test_():
